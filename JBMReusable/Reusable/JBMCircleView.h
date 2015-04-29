@@ -10,6 +10,6 @@
 
 @interface JBMCircleView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame andFillColor:(UIColor *)fillColor;
+- (instancetype)initWithFrame:(CGRect)frame fillColor:(UIColor *)fillColor strokeColor:(UIColor *)strokeColor strokeWidth:(CGFloat)strokeWidth;
 
 @end

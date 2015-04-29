@@ -11,6 +11,7 @@
 #import "JBMTouchView.h"
 #import "JBMCircleView.h"
 #import "JBMAnimatedButton.h"
+#import "JBMRoundedRectangleView.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) JBMTouchView *touchView;
 @property (nonatomic, strong) JBMCircleView *circleView;
 @property (nonatomic, strong) JBMAnimatedButton *animatedButton;
+@property (nonatomic, strong) JBMRoundedRectangleView *roundedRectangleView;
 
 @end
 
@@ -32,6 +34,7 @@
     self.touchView.hidden = NO;
     self.circleView.hidden = NO;
     self.animatedButton.hidden = NO;
+    self.roundedRectangleView.hidden = NO;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -57,8 +60,8 @@
 - (JBMTouchView *)touchView {
     if (!_touchView) {
         _touchView = [[JBMTouchView alloc] initWithFrame:self.view.bounds
-                                            andFillColor:[UIColor blueColor]
-                                    andAnimationDuration:0.33f];
+                                            fillColor:[UIColor blueColor]
+                                       animationDuration:0.33f];
         [self.view addSubview:_touchView];
     }
     return _touchView;
@@ -67,7 +70,9 @@
 - (JBMCircleView *)circleView {
     if (!_circleView) {
         _circleView = [[JBMCircleView alloc] initWithFrame:CGRectMake(10.0f, 30.0f, 100.0f, 100.0f)
-                                              andFillColor:[UIColor redColor]];
+                                                 fillColor:[UIColor redColor]
+                                               strokeColor:[UIColor blackColor]
+                                               strokeWidth:2.0f];
         [self.view addSubview:_circleView];
     }
     return _circleView;
@@ -84,6 +89,18 @@
         [self.view addSubview:_animatedButton];
     }
     return _animatedButton;
+}
+
+- (JBMRoundedRectangleView *)roundedRectangleView {
+    if (!_roundedRectangleView) {
+        _roundedRectangleView = [[JBMRoundedRectangleView alloc] initWithFrame:CGRectMake(120.0f, 30.0f, 100.0f, 100.0f)
+                                                                   borderColor:[UIColor blackColor]
+                                                                   borderWidth:2.0f
+                                                                  cornerRadius:10.0f];
+        _roundedRectangleView.backgroundColor = [UIColor yellowColor];
+        [self.view addSubview:_roundedRectangleView];
+    }
+    return _roundedRectangleView;
 }
 
 @end

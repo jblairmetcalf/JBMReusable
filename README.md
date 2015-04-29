@@ -4,19 +4,27 @@ JBMReusable
 Objective-C reusable views.
 ---------
 
-JBMAnimatedButton
+JBMAnimatedButton : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame image:(UIImage *)image selected:(BOOL)selected tintColor:(UIColor *)tintColor animationDuration:(CGFloat)animationDuration animationFrame:(CGRect)animationFrame;
 
-JBMCircleView
+JBMCircleView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame andFillColor:(UIColor *)fillColor;
+- (instancetype)initWithFrame:(CGRect)frame fillColor:(UIColor *)fillColor strokeColor:(UIColor *)strokeColor strokeWidth:(CGFloat)strokeWidth;
 
-JBMTouchView
+JBMRightTextLabelCell : UITableViewCell
 
-- (instancetype)initWithFrame:(CGRect)frame andFillColor:(UIColor *)fillColor andAnimationDuration:(CGFloat)animationDuration;
+- rightTextLabel;
+
+JBMRoundedRectangleView : UIView
+
+- (instancetype)initWithFrame:(CGRect)frame borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius;
+
+JBMTouchView : UIView
+
+- (instancetype)initWithFrame:(CGRect)frame fillColor:(UIColor *)fillColor animationDuration:(CGFloat)animationDuration;
 - (void)touchWithPoint:(CGPoint)point;
 
-JBMWireframeView
+JBMWireframeView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text;

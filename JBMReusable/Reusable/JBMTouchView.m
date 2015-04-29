@@ -22,8 +22,8 @@
 #pragma mark - Public Methods
 
 - (instancetype)initWithFrame:(CGRect)frame
-                 andFillColor:(UIColor *)fillColor
-         andAnimationDuration:(CGFloat)animationDuration
+                    fillColor:(UIColor *)fillColor
+            animationDuration:(CGFloat)animationDuration
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -70,7 +70,10 @@
 - (JBMCircleView *)circleView {
     if (!_circleView) {
         CGRect frame = CGRectMake(0.0f, 0.0f, 100.0f, 100.0f);
-        _circleView = [[JBMCircleView alloc] initWithFrame:frame andFillColor:self.fillColor];
+        _circleView = [[JBMCircleView alloc] initWithFrame:frame
+                                                 fillColor:self.fillColor
+                                               strokeColor:[UIColor clearColor]
+                                               strokeWidth:0.0f];
         [self addSubview:_circleView];
     }
     return _circleView;

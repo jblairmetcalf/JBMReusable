@@ -10,10 +10,7 @@
 
 @interface JBMTouchView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame
-                 andFillColor:(UIColor *)fillColor
-         andAnimationDuration:(CGFloat)animationDuration;
-
+- (instancetype)initWithFrame:(CGRect)frame fillColor:(UIColor *)fillColor animationDuration:(CGFloat)animationDuration;
 - (void)touchWithPoint:(CGPoint)point;
 
 @end

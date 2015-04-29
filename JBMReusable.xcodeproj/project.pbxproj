@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02896CDB1AF0F5C200396C1B /* JBMRightTextLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02896CDA1AF0F5C200396C1B /* JBMRightTextLabelCell.m */; };
+		02896CDE1AF0F5FF00396C1B /* JBMRoundedRectangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02896CDD1AF0F5FF00396C1B /* JBMRoundedRectangleView.m */; };
 		029E60F31AE4913300C14DCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 029E60F21AE4913300C14DCA /* main.m */; };
 		029E60F61AE4913300C14DCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 029E60F51AE4913300C14DCA /* AppDelegate.m */; };
 		029E60F91AE4913300C14DCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029E60F81AE4913300C14DCA /* ViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02896CD91AF0F5C200396C1B /* JBMRightTextLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMRightTextLabelCell.h; sourceTree = "<group>"; };
+		02896CDA1AF0F5C200396C1B /* JBMRightTextLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMRightTextLabelCell.m; sourceTree = "<group>"; };
+		02896CDC1AF0F5FF00396C1B /* JBMRoundedRectangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMRoundedRectangleView.h; sourceTree = "<group>"; };
+		02896CDD1AF0F5FF00396C1B /* JBMRoundedRectangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMRoundedRectangleView.m; sourceTree = "<group>"; };
 		029E60ED1AE4913300C14DCA /* JBMReusable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBMReusable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029E60F11AE4913300C14DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		029E60F21AE4913300C14DCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,6 +146,10 @@
 				029E61181AE491BD00C14DCA /* JBMAnimatedButton.m */,
 				029E61191AE491BD00C14DCA /* JBMCircleView.h */,
 				029E611A1AE491BD00C14DCA /* JBMCircleView.m */,
+				02896CD91AF0F5C200396C1B /* JBMRightTextLabelCell.h */,
+				02896CDA1AF0F5C200396C1B /* JBMRightTextLabelCell.m */,
+				02896CDC1AF0F5FF00396C1B /* JBMRoundedRectangleView.h */,
+				02896CDD1AF0F5FF00396C1B /* JBMRoundedRectangleView.m */,
 				029E611B1AE491BD00C14DCA /* JBMTouchView.h */,
 				029E611C1AE491BD00C14DCA /* JBMTouchView.m */,
 				029E611D1AE491BD00C14DCA /* JBMWireframeView.h */,
@@ -256,6 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02896CDE1AF0F5FF00396C1B /* JBMRoundedRectangleView.m in Sources */,
+				02896CDB1AF0F5C200396C1B /* JBMRightTextLabelCell.m in Sources */,
 				029E61211AE491BD00C14DCA /* JBMTouchView.m in Sources */,
 				029E61201AE491BD00C14DCA /* JBMCircleView.m in Sources */,
 				029E60F91AE4913300C14DCA /* ViewController.m in Sources */,
