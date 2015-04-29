@@ -85,7 +85,8 @@
                                                           selected:YES
                                                          tintColor:[UIColor greenColor]
                                                  animationDuration:0.33f
-                                                    animationFrame:CGRectMake(-44.0f, 0.0f, 88.0f, 44.0f)];
+                                                    animationFrame:CGRectMake(-44.0f, 0.0f, 88.0f, 44.0f)
+                                              animationEaseMirrors:YES];
         [self.view addSubview:_animatedButton];
     }
     return _animatedButton;

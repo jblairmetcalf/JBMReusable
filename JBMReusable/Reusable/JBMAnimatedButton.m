@@ -16,19 +16,22 @@
 @property (nonatomic, strong) UIColor *tintColor;
 @property (nonatomic) CGFloat animationDuration;
 @property (nonatomic) CGRect animationFrame;
+@property (nonatomic) BOOL animationEaseMirrors;
 
 @end
 
 @implementation JBMAnimatedButton
 
-#pragma mark - Override Methods
+#pragma mark - Public Methods
 
 - (instancetype)initWithFrame:(CGRect)frame
                         image:(UIImage *)image
                      selected:(BOOL)selected
                     tintColor:(UIColor *)tintColor
             animationDuration:(CGFloat)animationDuration
-               animationFrame:(CGRect)animationFrame {
+               animationFrame:(CGRect)animationFrame
+         animationEaseMirrors:(BOOL)animationEaseMirrors
+{
     self = [super initWithFrame:frame];
     if (self) {
         self.clipsToBounds = YES;
@@ -38,12 +41,12 @@
         _tintColor = tintColor;
         _animationDuration = animationDuration;
         _animationFrame = animationFrame;
+        _animationEaseMirrors = animationEaseMirrors;
         
         [self positionButton];
     }
     return self;
 }
-#pragma mark - Public Methods
 
 - (void)setSelected:(BOOL)selected {
     _selected = selected;
@@ -62,7 +65,12 @@
 
 - (void)animateDockToggleButton:(BOOL)animated {
     CGRect buttonFrame = [self buttonFrame];
-    NSInteger options = self.selected ? UIViewAnimationOptionCurveEaseOut : UIViewAnimationOptionCurveEaseIn;
+    NSInteger options;
+    if (self.animationEaseMirrors) {
+        options = self.selected ? UIViewAnimationOptionCurveEaseOut : UIViewAnimationOptionCurveEaseIn;
+    } else {
+        options = UIViewAnimationOptionCurveEaseInOut;
+    }
     if (animated) {
         [UIView animateWithDuration:self.animationDuration
                               delay:0.0f

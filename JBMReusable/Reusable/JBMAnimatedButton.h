@@ -24,6 +24,7 @@
                      selected:(BOOL)selected
                     tintColor:(UIColor *)tintColor
             animationDuration:(CGFloat)animationDuration
-               animationFrame:(CGRect)animationFrame;
+               animationFrame:(CGRect)animationFrame
+         animationEaseMirrors:(BOOL)animationEaseMirrors;
 
 @end
